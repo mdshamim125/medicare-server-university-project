@@ -1,0 +1,20 @@
+{
+  "name": "medicare-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Md Shamim",
+  "license": "MIT",
+  "prisma": {
+    "schema": "./prisma/schema"
+  },
+  "scripts": {
+    "dev": "bun --watch src/server.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "http-status": "^2.1.0"
+  }
+}
