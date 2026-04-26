@@ -4,19 +4,23 @@ import sendResponse from "../../shared/sendResponse";
 import { DoctorScheduleService } from "./doctorSchedule.service";
 import { IJWTPayload } from "../../types/common";
 
-const insertIntoDB = catchAsync(async (req: Request & { user?: IJWTPayload }, res: Response) => {
+const insertIntoDB = catchAsync(
+  async (req: Request & { user?: IJWTPayload }, res: Response) => {
     const user = req.user;
-    const result = await DoctorScheduleService.insertIntoDB(user as IJWTPayload, req.body);
+    const result = await DoctorScheduleService.insertIntoDB(
+      user as IJWTPayload,
+      req.body,
+    );
 
     sendResponse(res, {
-        statusCode: 201,
-        success: true,
-        message: "Doctor Schedule created successfully!",
-        data: result
-    })
-});
-
+      statusCode: 201,
+      success: true,
+      message: "Doctor Schedule created successfully!",
+      data: result,
+    });
+  },
+);
 
 export const DoctorScheduleController = {
-    insertIntoDB,
-}
+  insertIntoDB,
+};
