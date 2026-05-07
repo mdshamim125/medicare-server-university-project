@@ -22,6 +22,8 @@ const handleStripeWebhookEvent = async (event: any) => {
         },
       });
 
+      console.log(session);
+
       await prisma.payment.update({
         where: {
           id: paymentId,

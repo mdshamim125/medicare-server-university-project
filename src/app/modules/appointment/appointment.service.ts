@@ -86,8 +86,8 @@ const createAppointment = async (
         appointmentId: appointmentData.id,
         paymentId: paymentData.id,
       },
-      success_url: `https://www.programming-hero.com/`,
-      cancel_url: `https://next.programming-hero.com/`,
+      success_url: `https://mdshamim125.netlify.app/`,
+      cancel_url: `https://github.com/mdshamim125/`,
     });
 
     return { paymentUrl: session.url };
